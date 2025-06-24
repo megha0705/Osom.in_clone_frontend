@@ -34,4 +34,6 @@ build/
 **/application.properties
 .env
 # Ignore frontend
+
+# Or if backend is mistakenly in root and starts with src/
 src/
