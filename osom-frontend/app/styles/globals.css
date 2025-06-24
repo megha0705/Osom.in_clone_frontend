@@ -1,0 +1,157 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Custom Font for OSOM */
+@import url('https://fonts.googleapis.com/css2?family=Highlight+2&display=swap');
+
+/* Navbar Styles */
+.osom-logo {
+  font-family: 'Highlight 2', sans-serif;
+  font-size: 1.8rem;
+  margin-left: 20px;
+}
+
+.cart-overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: white;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 9999;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search-bar {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+  padding-left: 8px;
+  background-color: white;
+}
+
+/* Centering navbar buttons */
+.nav-links {
+  gap: 20px;
+}
+
+/* Extra margin for first button */
+.nav-links .first-btn {
+  margin-left: 40px;
+}
+
+/* Log in & Cart Button */
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-btn {
+  margin-right: 20px;
+}
+
+.img-fixed-size {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* border-radius: 10px; */
+}
+
+.footer {
+  background-color: rgb(64,64,64); /* Dark Grey Background */
+  color: #f0f0f0; /* Off-White Font Color */
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.offer-text {
+  font-weight: 200px;
+}
+
+.footer-links {
+  font-size: 14px;
+}
+
+.footer-left {
+  padding-left: 40px;
+  margin-left: auto; /* Add space */
+}
+
+.footer-right {
+  margin-left: auto; 
+  margin-right: auto; 
+  /* Push to right */
+  padding-right: 40px; 
+  /* Add space */
+}
+
+.cardElement {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.cardElement input {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-right {
+    padding: 10px; /* Adjust for mobile */
+    text-align: center;
+    margin: auto;
+  }
+}
+

@@ -34,4 +34,4 @@ build/
 **/application.properties
 .env
 # Ignore frontend
-osom-frontend/
+src/
