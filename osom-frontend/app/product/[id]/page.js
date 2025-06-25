@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // Fetch product by ID
 async function getProduct(id) {
-  const res = await fetch(`http://localhost:8080/product/${id}`, { cache: "no-store" });
+  const res = await fetch(`https://osom-in-clone-backend-8.onrender.com/product/${id}`, { cache: "no-store" });
   if (!res.ok) return null;
   return res.json();
 }
