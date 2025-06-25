@@ -10,7 +10,7 @@ export default function Hero() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:8080/product/getAll");
+        const res = await fetch("https://osom-in-clone-backend-8.onrender.com/product/getAll");
         // console.log(res.json());
         const data = await res.json();
         setProducts(data.slice(0, 8)); // Limit to 8 items
