@@ -14,7 +14,7 @@ export default function NavigationBar() {
     <Navbar expand="lg" className="bg-white py-3">
       <Container fluid>
         {/* OSOM Logo */}
-        <Navbar.Brand href="http://localhost:3000" className="osom-logo">
+        <Navbar.Brand href="https://osom-in-clone-frontend.vercel.app/" className="osom-logo">
           <Image
             src="/images/logo.png"
             alt="OSOM Logo"
