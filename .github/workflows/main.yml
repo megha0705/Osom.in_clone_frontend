@@ -1,0 +1,14 @@
+name: Refresh OSOM Frontend
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Refresh frontend via curl
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://osom-in-clone-frontend.vercel.app/
