@@ -37,3 +37,4 @@ build/
 
 # Or if backend is mistakenly in root and starts with src/
 src/
+*.py

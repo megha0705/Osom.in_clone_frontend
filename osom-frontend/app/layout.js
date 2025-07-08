@@ -3,11 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavigationBar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { CartProvider } from "./components/CartContext";
-import CartOverlay from "./components/CartOverlay";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,14 +21,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <CartProvider>
-          <NavigationBar />
-          {children}
-          <Footer />
-          <CartOverlay />
-        </CartProvider>
+      <body>
+        {children}
       </body>
     </html>
   );
 }
+
+

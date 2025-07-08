@@ -9,8 +9,8 @@ export const useCart = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [buyNowItem, setBuyNowItem] = useState(null); // ✅ Added
 
-  // ✅ Load cart from localStorage on first mount
   useEffect(() => {
     const storedCart = localStorage.getItem("cartItems");
     if (storedCart) {
@@ -18,7 +18,6 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
-  // ✅ Save to localStorage whenever cartItems changes
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
@@ -77,6 +76,8 @@ export const CartProvider = ({ children }) => {
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
+        buyNowItem,            // ✅ Added
+        setBuyNowItem,         // ✅ Added
       }}
     >
       {children}
