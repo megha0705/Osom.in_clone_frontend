@@ -12,7 +12,7 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("https://osom-in-clone-backend-8.onrender.com/product/getAll", {
+        const res = await fetch("https://osom-in-clone-backend-ntd2.onrender.com/product/getAll", {
           cache: "no-store"
         });
         const data = await res.json();
