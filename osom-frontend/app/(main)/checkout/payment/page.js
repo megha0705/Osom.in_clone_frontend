@@ -65,7 +65,7 @@ export default function PaymentPage() {
                 redirect: "follow",
             };
 
-            const res = await fetch("https://osom-in-clone-backend-8.onrender.com/payment/createIntent", requestOptions);
+            const res = await fetch("https://osom-in-clone-backend-ntd2.onrender.com/payment/createIntent", requestOptions);
 
             if (!res.ok) {
                 const text = await res.text();
