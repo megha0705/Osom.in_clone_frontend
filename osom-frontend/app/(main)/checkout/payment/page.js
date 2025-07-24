@@ -20,7 +20,7 @@ export default function PaymentPage() {
             script.src = "https://js.stripe.com/v3/";
             script.async = true;
             script.onload = () => {
-                const stripeJs = window.Stripe("pk_test_51ROKo2CWCqLDDhXMbb54Z3K7tuheWSOTRcEGMUBq8asjDLNLP7QXEDRd0GGivDfqbCj8Oa2ITnS4j8f0vuYIuIXH00FDdblg6P");
+                const stripeJs = window.Stripe("pk_test_51RoPMhFwEmUSrI9DuAzUPBtWofZxwn9JsCvqT4kUeqSLxzxK8jUpStaZ2wWBEyzQ67nCXR5IG2TbiAyjrMLXq3X700ciujUBf0");
                 setStripe(stripeJs);
                 const stripeElements = stripeJs.elements();
                 const cardElement = stripeElements.create("card");
